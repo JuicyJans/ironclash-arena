@@ -100,7 +100,7 @@ export const BRONZE: CampaignLevel[] = [
         build: makeBuild({
           name: 'Sir Grindalot',
           chassis: 'medium',
-          armor: ['balanced', 2],
+          armor: ['balanced', 3],
           drive: ['tracks', 2],
           weapon: ['hammer', 2],
           power: ['capacity', 2],

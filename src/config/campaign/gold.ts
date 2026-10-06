@@ -51,7 +51,7 @@ export const GOLD: CampaignLevel[] = [
           chassis: 'heavy',
           armor: ['balanced', 3],
           drive: ['wheels', 5],
-          weapon: ['drum', 4],
+          weapon: ['drum', 3],
           power: ['regen', 3],
           cosmetics: look('#ecc94b', '#1a1a1a', '#fff27a', 'bolt'),
         }),

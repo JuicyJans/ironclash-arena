@@ -61,7 +61,7 @@ const armorBalanced = ARMOR_TIERS.map((t) => ({
 }));
 
 const armorFrontHeavy = ARMOR_TIERS.map((t) => ({
-  hp: Math.round(t.hp * 0.8),
+  hp: Math.round(t.hp * 0.75),
   weight: t.weight,
   armorFront: t.armor * 1.45,
   armorSide: t.armor * 0.85,
@@ -81,11 +81,11 @@ const DRIVE = {
     weight: 12,
   },
   tracks: {
-    speed: [255, 275, 295, 315, 335],
-    accel: [850, 930, 1010, 1090, 1170],
-    turn: 3.6,
-    grip: 0.62,
-    push: 0.3,
+    speed: [240, 258, 276, 294, 312],
+    accel: [780, 850, 920, 990, 1060],
+    turn: 3.4,
+    grip: 0.47,
+    push: 0.12,
     weight: 22,
   },
   shuffler: {

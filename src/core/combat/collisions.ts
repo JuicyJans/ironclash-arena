@@ -7,10 +7,10 @@ import { activePairs, contactPoint, startedPairs } from '../physics/world';
 import { hitSide } from './damage';
 
 const P = BALANCE.physics;
-const WEDGE_LIFT_SEC = 0.7;
+const WEDGE_LIFT_SEC = 1.0;
 const DASH_RAM_MUL = 2.4;
 /** Wedges are built for ramming: frontal impacts hurt more even without a dash. */
-const WEDGE_RAM_MUL = 1.5;
+const WEDGE_RAM_MUL = 1.9;
 
 export type BodyOwner =
   | { kind: 'robot'; robot: RobotEntity }

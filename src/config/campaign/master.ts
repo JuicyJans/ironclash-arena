@@ -26,7 +26,7 @@ export const MASTER: CampaignLevel[] = [
         build: makeBuild({
           name: 'Sir Grindalot Mk II',
           chassis: 'heavy',
-          armor: ['balanced', 4],
+          armor: ['balanced', 3],
           drive: ['tracks', 4],
           weapon: ['hammer', 4],
           power: ['capacity', 4],
