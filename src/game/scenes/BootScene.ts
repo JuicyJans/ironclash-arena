@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { paintParticleTextures } from '../render/paint/propsPainter';
+import { paintParticleTextures } from '../render/paint/particleTextures';
 import { canvasTexture } from '../render/textures';
 
 /** Generates shared procedural textures, then starts the attract-mode backdrop. */
