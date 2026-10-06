@@ -286,3 +286,58 @@ export function paintParticleTextures(): Record<string, HTMLCanvasElement> {
     ]),
   };
 }
+
+/** Scrapyard props: steel crates (rectangles) and oil drums (small squares). */
+export function paintProp(w: number, h: number, seed: number): HTMLCanvasElement {
+  const s = 2;
+  const [c, ctx] = makeCanvas((w + 8) * s, (h + 8) * s);
+  ctx.scale(s, s);
+  ctx.translate(4, 4);
+  if (Math.abs(w - h) < 4 && w <= 56) {
+    const r = w / 2;
+    const g = ctx.createRadialGradient(r * 0.7, r * 0.7, 2, r, r, r);
+    const hue = seed % 2 === 0 ? '#b5452b' : '#2f6f8f';
+    g.addColorStop(0, shade(hue, 0.35));
+    g.addColorStop(1, shade(hue, -0.45));
+    ctx.fillStyle = g;
+    ctx.beginPath();
+    ctx.arc(r, r, r, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(0,0,0,0.45)';
+    ctx.lineWidth = 2;
+    for (const k of [0.62, 0.86]) {
+      ctx.beginPath();
+      ctx.arc(r, r, r * k, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+    ctx.fillStyle = '#1a1a1a';
+    ctx.beginPath();
+    ctx.arc(r * 1.35, r * 0.75, r * 0.12, 0, Math.PI * 2);
+    ctx.fill();
+    hazardStripes(ctx, r * 0.55, r * 0.9, r * 0.9, r * 0.22, 3);
+    return c;
+  }
+  const g = ctx.createLinearGradient(0, 0, w, h);
+  g.addColorStop(0, '#7d7461');
+  g.addColorStop(1, '#3f3a2f');
+  chamferPath(ctx, 0, 0, w, h, 4);
+  ctx.fillStyle = g;
+  ctx.fill();
+  ctx.strokeStyle = '#2a261f';
+  ctx.lineWidth = 3;
+  ctx.strokeRect(4, 4, w - 8, h - 8);
+  ctx.beginPath();
+  ctx.moveTo(6, 6);
+  ctx.lineTo(w - 6, h - 6);
+  ctx.moveTo(w - 6, 6);
+  ctx.lineTo(6, h - 6);
+  ctx.stroke();
+  for (const [x, y] of [
+    [6, 6],
+    [w - 6, 6],
+    [6, h - 6],
+    [w - 6, h - 6],
+  ] as const)
+    bolt(ctx, x, y, 2);
+  return c;
+}

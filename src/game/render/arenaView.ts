@@ -3,7 +3,13 @@ import type { ArenaDef } from '../../config/types';
 import type { HouseView as HouseState, WorldState } from '../../core/match/worldState';
 import { HazardView } from './hazardView';
 import { ARENA_MARGIN, paintArenaFloor, paintLightMask, paintLightPools } from './paint/arenaPainter';
-import { paintHouseRobot, paintHouseWeapon, paintPitDoor, paintPitHole } from './paint/propsPainter';
+import {
+  paintHouseRobot,
+  paintHouseWeapon,
+  paintPitDoor,
+  paintPitHole,
+  paintProp,
+} from './paint/propsPainter';
 import { canvasTexture } from './textures';
 
 const HOUSE_SIZE = 74;
@@ -28,7 +34,7 @@ export class ArenaView {
   readonly hazards: HazardView[];
   private pits: PitView[] = [];
   private houses: HouseSprite[] = [];
-  private props: Phaser.GameObjects.Rectangle[] = [];
+  private props: Phaser.GameObjects.Image[] = [];
   private barrierLights: Phaser.GameObjects.Arc[] = [];
   private objs: Phaser.GameObjects.GameObject[] = [];
 
@@ -78,11 +84,12 @@ export class ArenaView {
       this.objs.push(shadow, body, weapon);
     });
 
-    for (const p of arena.props ?? []) {
-      const rect = s.add.rectangle(p.x, p.y, p.w, p.h, 0x6b5a3a).setStrokeStyle(3, 0x2b2418).setDepth(90);
-      this.props.push(rect);
-      this.objs.push(rect);
-    }
+    (arena.props ?? []).forEach((p, i) => {
+      const key = canvasTexture(s, `prop:${p.w}x${p.h}:${i % 2}`, paintProp(p.w, p.h, i));
+      const img = s.add.image(p.x, p.y, key).setScale(0.5).setDepth(90);
+      this.props.push(img);
+      this.objs.push(img);
+    });
 
     if (quality !== 'low') {
       const n = quality === 'high' ? 28 : 14;

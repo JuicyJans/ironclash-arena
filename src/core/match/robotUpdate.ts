@@ -218,7 +218,8 @@ function checkPits(ctx: SimContext, r: RobotEntity): void {
 
 function updateImmobile(ctx: SimContext, r: RobotEntity): void {
   if (!r.alive) return;
-  if (ctx.warmup) {
+  // No count-outs while learning: tutorial warm-up and the practice arena.
+  if (ctx.warmup || ctx.config.mode === 'practice') {
     r.immobileTimer = 0;
     return;
   }

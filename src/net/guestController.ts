@@ -2,7 +2,8 @@ import { DT } from '../config/balance';
 import type { RobotStats } from '../config/types';
 import { EventBus } from '../core/events';
 import type { MatchConfig, MatchResult } from '../core/match/types';
-import type { RobotView, WorldState } from '../core/match/worldState';
+import { initialState, type RobotView, type WorldState } from '../core/match/worldState';
+import { getArena } from '../config/arenas';
 import { computeRobotStats } from '../core/robot/computeStats';
 import type { Keymap } from '../core/save/schema';
 import { lerp, lerpAngle } from '../utils/math';
@@ -48,19 +49,7 @@ export class GuestController implements MatchController {
   ) {
     this.stats = config.robots.map((r) => computeRobotStats(r.build));
     this.myId = config.robots.findIndex((r) => r.controller === 'remote');
-    const empty: WorldState = {
-      tick: 0,
-      time: 0,
-      timeLeft: config.durationSec,
-      robots: [],
-      houses: [],
-      hazards: [],
-      pits: [],
-      props: [],
-      ended: false,
-      winnerTeam: -1,
-      scores: [],
-    };
+    const empty = initialState(config, getArena(config.arenaId), this.stats);
     this.prev = empty;
     this.curr = empty;
     this.offs.push(
