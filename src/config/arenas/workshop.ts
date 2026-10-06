@@ -1,0 +1,62 @@
+import type { ArenaDef } from '../types';
+
+export const WORKSHOP: ArenaDef = {
+  id: 'workshop',
+  nameKey: 'arenas.workshop.name',
+  descKey: 'arenas.workshop.desc',
+  size: { w: 1200, h: 800 },
+  theme: {
+    floor: '#3a3631',
+    floorAlt: '#2f2b27',
+    wall: '#5b4a36',
+    accent: '#FFC21A',
+    light: '#ffd9a0',
+    ambient: 0.45,
+    mood: 'workshop',
+  },
+  grip: 1,
+  pits: [{ rect: { x: 870, y: 540, w: 130, h: 130 }, opensAt: 60, button: { x: 70, y: 670, w: 60, h: 60 } }],
+  houseRobots: [
+    {
+      id: 'spanner',
+      nameKey: 'house.spanner',
+      zone: { x: 1030, y: 0, w: 170, h: 170 },
+      attack: 'hammer',
+      damage: 16,
+      speed: 150,
+      attackCooldown: 1.6,
+      grace: 1.2,
+      color: '#d9a400',
+    },
+  ],
+  hazards: [
+    {
+      kind: 'spikes',
+      id: 'sp1',
+      rect: { x: 380, y: 170, w: 90, h: 90 },
+      damage: 12,
+      launch: 260,
+      period: 6.5,
+      telegraph: 1.0,
+      active: 0.8,
+      randomPhase: true,
+    },
+    {
+      kind: 'spikes',
+      id: 'sp2',
+      rect: { x: 690, y: 540, w: 90, h: 90 },
+      damage: 12,
+      launch: 260,
+      period: 6.5,
+      telegraph: 1.0,
+      active: 0.8,
+      phase: 3.2,
+      randomPhase: true,
+    },
+  ],
+  spawns: [
+    { x: 230, y: 400, angle: 0 },
+    { x: 970, y: 400, angle: Math.PI },
+    { x: 970, y: 250, angle: Math.PI },
+  ],
+};

@@ -1,0 +1,56 @@
+:root {
+  --c-graphite: #121418;
+  --c-graphite-2: #1a1d23;
+  --c-panel: #20242c;
+  --c-panel-hi: #2a2f39;
+  --c-steel: #8a93a3;
+  --c-steel-light: #c4cad4;
+  --c-text: #eef1f5;
+  --c-text-dim: #9aa3b2;
+  --c-hazard: #ffc21a;
+  --c-signal: #ff5a1f;
+  --c-cyan: #22d3ee;
+  --c-danger: #ff3b3b;
+  --c-success: #3ddc84;
+  --c-p1: #22d3ee;
+  --c-p2: #ff5a1f;
+
+  --f-heading: 'Rajdhani', 'Oxanium', 'Arial Narrow', sans-serif;
+  --f-body: 'Inter', system-ui, sans-serif;
+
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+
+  --r-sm: 2px;
+  --r-md: 4px;
+  --r-lg: 8px;
+
+  --t-fast: 150ms;
+  --t-normal: 200ms;
+  --t-slow: 250ms;
+
+  --cut: 12px; /* size of angled corners */
+  --text-scale: 1;
+  --glow-cyan: 0 0 0 1px rgba(34, 211, 238, 0.55), 0 0 14px rgba(34, 211, 238, 0.25);
+  --stripe: repeating-linear-gradient(-45deg, var(--c-hazard) 0 10px, #111 10px 20px);
+}
+
+/* Colour-blind modes swap the team colours for a high-contrast, hue-safe pair. */
+:root[data-cb='deuteranopia'],
+:root[data-cb='protanopia'] {
+  --c-p1: #3b82f6;
+  --c-p2: #f59e0b;
+  --c-success: #3b82f6;
+  --c-danger: #f59e0b;
+}
+:root[data-cb='tritanopia'] {
+  --c-p1: #ec4899;
+  --c-p2: #14b8a6;
+  --c-cyan: #f472b6;
+}

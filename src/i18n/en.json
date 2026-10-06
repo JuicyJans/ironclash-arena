@@ -1,0 +1,606 @@
+{
+  "ai": {
+    "berserker": "Berserker",
+    "bruiser": "Bruiser",
+    "champion": "Champion",
+    "patient": "Patient",
+    "pusher": "Pusher",
+    "rookie": "Rookie",
+    "speedster": "Speedster",
+    "spinner": "Spinner fanatic",
+    "tactician": "Tactician"
+  },
+  "arenas": {
+    "colosseum": {
+      "desc": "Multiple pits, floor flippers, wall saws and two house robots.",
+      "name": "The Colosseum"
+    },
+    "foundry": {
+      "desc": "Floor flame jets and a channel of molten metal.",
+      "name": "The Foundry"
+    },
+    "icefactory": {
+      "desc": "Slippery ice, a turntable and a ceiling press.",
+      "name": "The Ice Factory"
+    },
+    "scrapyard": {
+      "desc": "Loose objects to push and smash.",
+      "name": "The Scrapyard"
+    },
+    "workshop": {
+      "desc": "Simple layout with floor spikes and one house robot.",
+      "name": "The Workshop"
+    }
+  },
+  "campaign": {
+    "arena": "Arena",
+    "best": "Best time",
+    "boss": "BOSS",
+    "c01": "First Spark",
+    "c02": "Wedge Trouble",
+    "c03": "The Sawmill",
+    "c04": "Lord of the Workshop",
+    "c05": "Glowing Floor",
+    "c06": "Whirlwind",
+    "c07": "Two Against One",
+    "c08": "The Crucible",
+    "c09": "Thin Ice",
+    "c10": "Over-revved",
+    "c11": "The Reflection",
+    "c12": "High Voltage",
+    "c13": "Old Enemies",
+    "c14": "Reborn in Fire",
+    "c15": "The Iron Throne",
+    "damaged": "Your robot is {pct}% damaged.",
+    "details": "Fight details",
+    "difficulty": "Difficulty",
+    "fight": "Fight!",
+    "league": {
+      "bronze": "Bronze League",
+      "gold": "Gold League",
+      "master": "Master League",
+      "silver": "Silver League"
+    },
+    "opponent": "Opponent",
+    "repair": "Repair (⛁ {cost})",
+    "repaired": "Robot repaired!",
+    "reward": "Victory reward",
+    "starRules": "★ Win · ★★ Win within {par} s · ★★★ Win within {par} s taking less than {dmg}% damage",
+    "subtitle": "Tournament ladder · {stars}/{max} stars",
+    "title": "Campaign"
+  },
+  "common": {
+    "back": "Back",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "credits": "Credits",
+    "locked": "Locked",
+    "scrap": "Scrap",
+    "skip": "Skip",
+    "stars": "stars",
+    "tryAgain": "Try again"
+  },
+  "controls": {
+    "boost": "Boost",
+    "down": "Reverse",
+    "drive": "Drive",
+    "left": "Turn left",
+    "right": "Turn right",
+    "special": "Special",
+    "up": "Forward",
+    "weapon": "Weapon"
+  },
+  "credits": {
+    "full": "Full list in CREDITS.md.",
+    "game": "The game",
+    "libraries": "Open source",
+    "made": "IRONCLASH ARENA – made with TypeScript, Phaser and lots of metallic love.",
+    "original": "All robots, arenas, names and characters are original and fictional.",
+    "procedural": "All graphics, music and sound are generated procedurally in code – no licensed assets.",
+    "title": "Credits"
+  },
+  "difficulty": {
+    "easy": "Easy",
+    "hard": "Hard",
+    "mechanic": "Mechanic",
+    "normal": "Normal"
+  },
+  "error": {
+    "copied": "Error log copied.",
+    "copy": "Copy error log",
+    "reload": "Reload",
+    "resetSave": "Reset save",
+    "text": "Sorry! The game hit an unexpected error. Reload – your progress is saved.",
+    "title": "Something broke"
+  },
+  "garage": {
+    "categories": "Part categories",
+    "chassisInfo": "Weight limit {limit} kg · {hp} base HP",
+    "decals": {
+      "bolt": "Bolt",
+      "checker": "Checker",
+      "flames": "Flames",
+      "none": "None",
+      "number": "Number",
+      "skull": "Skull",
+      "stripes": "Stripes"
+    },
+    "equip": "Equip",
+    "equipped": "EQUIPPED",
+    "equippedMsg": "{name} equipped",
+    "hint": "Hover a part to compare before/after. Weight limit: {limit} kg. Parts sell for 60% of their price.",
+    "level": "Level",
+    "levelOf": "Level {level} of {max}",
+    "loadouts": "Loadouts",
+    "overweight": "Overweight! Remove or swap parts to get under the weight limit.",
+    "owned": "You own level {level} of {max}.",
+    "paint": {
+      "decal": "Decal",
+      "led": "LED colour",
+      "name": "Robot name",
+      "primary": "Primary colour",
+      "secondary": "Secondary colour"
+    },
+    "previewLabel": "3D preview of {name}. Use the arrow keys to rotate.",
+    "stats": "Stats",
+    "subtitle": "Build, upgrade and paint your robot",
+    "tabs": {
+      "armor": "Armour",
+      "chassis": "Chassis",
+      "drive": "Drive",
+      "paint": "Paint",
+      "power": "Power",
+      "support": "Support",
+      "weapon": "Weapon"
+    },
+    "title": "Garage",
+    "unequip": "Unequip",
+    "unlockHint": "Unlocked by winning “{level}”.",
+    "weight": "Weight"
+  },
+  "host": {
+    "c04": {
+      "intro": "Welcome to the bronze final! Sir Grindalot has ruled this workshop for years – and his hammer has crushed more chassis than we can count. Stay away from his front!",
+      "outro": "What a fight! The bronze trophy is yours. Next stop: the Foundry, where the floor is literally on fire!"
+    },
+    "c08": {
+      "intro": "Molten Maw awaits in the crucible. Its jaws can hold a robot for seconds – and it knows exactly where the flames are.",
+      "outro": "The Silver League is conquered! Get your studs on – the Ice Factory is slicker than it looks."
+    },
+    "c12": {
+      "intro": "Voltress adapts to everything you do. She has studied every fight you've fought. Surprise her!",
+      "outro": "Gold! Only the Colosseum remains – and there every hazard is live at once."
+    },
+    "c13": {
+      "intro": "Welcome to the Colosseum! Old enemies have rebuilt stronger. Can you survive the gauntlet?"
+    },
+    "c15": {
+      "intro": "This is it. Iron Sovereign has never lost in this arena. The crowd holds its breath …",
+      "outro": "INCREDIBLE! We have a new champion! Your name will be welded into the Iron Throne forever!"
+    },
+    "name": "Host Rita Rivet"
+  },
+  "house": {
+    "frostbite": "Frostbite",
+    "furnace": "Furnace Fred",
+    "magpie": "The Magpie",
+    "reaper": "The Reaper",
+    "spanner": "Sergeant Spanner",
+    "warden": "The Warden"
+  },
+  "hud": {
+    "disconnected": "Connection lost – waiting",
+    "driveDamaged": "DRIVE DAMAGED",
+    "energy": "Energy",
+    "fight": "Fight",
+    "flipped": "FLIPPED",
+    "go": "FIGHT!",
+    "immobile": "IMMOBILE {s}",
+    "judges": "Judges: {a} – {b}",
+    "ko": "KO",
+    "minimap": "Arena minimap",
+    "moveHint": "Move – or you'll be counted out!",
+    "pitOpen": "The pit is open!",
+    "practice": "Practice",
+    "selfRightHint": "Hold {weapon} / {special} to self-right!",
+    "special": "Special {s}s",
+    "timeLeft": "Time left",
+    "waitingHost": "Waiting for host …",
+    "weaponDamaged": "WEAPON DAMAGED",
+    "you": "YOU"
+  },
+  "local": {
+    "fair": "Fair mode",
+    "fairHint": "Evens out budget differences with a small HP adjustment so expensive builds don't win automatically.",
+    "noPad": "No gamepad – keyboard",
+    "player": "Player {n}",
+    "start": "Start match",
+    "subtitle": "Two players on one machine",
+    "title": "Local 2-player"
+  },
+  "menu": {
+    "campaign": "Campaign",
+    "credits": "Credits",
+    "footer": "No tracking · Saved locally in your browser",
+    "garage": "Garage",
+    "garageHint": "Build and upgrade",
+    "local": "Local 2-player",
+    "localHint": "Shared keyboard / gamepad",
+    "online": "Online",
+    "onlineHint": "Private room with code",
+    "practice": "Practice arena",
+    "practiceHint": "Test weapons and builds",
+    "quick": "Quick match",
+    "quickHint": "One fight vs AI",
+    "record": "{wins} wins in {matches} matches",
+    "settings": "Settings",
+    "title": "Main menu",
+    "yourRobot": "Your robot"
+  },
+  "online": {
+    "code": "Room code",
+    "connecting": "Connecting",
+    "copied": "Link copied!",
+    "copyLink": "Copy link",
+    "create": "Create room",
+    "createBtn": "Create room",
+    "createHint": "Get a 6-character code and a link to share.",
+    "errorTitle": "Could not connect",
+    "errors": {
+      "closed": "The other player left the room.",
+      "codeTaken": "Room code taken – try again.",
+      "full": "The room is full.",
+      "network": "Network error. Check your connection and try again.",
+      "notFound": "Room not found. Check the code.",
+      "version": "You are running different game versions. Both of you should reload."
+    },
+    "hostStarts": "The host starts the match when both are ready.",
+    "join": "Join",
+    "joinBtn": "Join",
+    "joinHint": "Enter your friend's room code.",
+    "leave": "Leave room",
+    "name": "Player name",
+    "notReady": "NOT READY",
+    "p2pNote": "The connection is peer-to-peer. Behind strict firewalls a TURN server may be needed (see README).",
+    "ping": "Ping {ms} ms",
+    "players": "Players",
+    "pleaseWait": "Please wait …",
+    "ready": "READY",
+    "readyToggle": "I'm ready",
+    "robot": "Robot",
+    "room": "Room",
+    "start": "Start match",
+    "subtitle": "Private room with code – browser to browser (WebRTC)",
+    "title": "Online",
+    "waiting": "Waiting for opponent …",
+    "you": "You"
+  },
+  "parts": {
+    "armor": {
+      "balanced": {
+        "desc": "Equal protection all around. Tiers: mild steel → aluminium → hardened steel → titanium → composite ceramic.",
+        "name": "Even armour"
+      },
+      "frontHeavy": {
+        "desc": "A thick front plate that shrugs off head-on hits and pushes harder – but the rear is exposed.",
+        "name": "Heavy front, light rear"
+      }
+    },
+    "chassis": {
+      "heavy": "Heavy chassis",
+      "light": "Light chassis",
+      "medium": "Medium chassis"
+    },
+    "drive": {
+      "shuffler": {
+        "desc": "Walking legs: enormous grip and push, but slow and heavy.",
+        "name": "Shuffler"
+      },
+      "tracks": {
+        "desc": "Lots of grip and push, a bit slower.",
+        "name": "Tracks"
+      },
+      "wheels": {
+        "desc": "Fast and nimble with moderate grip. Light.",
+        "name": "Wheels"
+      }
+    },
+    "power": {
+      "capacity": {
+        "desc": "Big battery for long fights and plenty of boost.",
+        "name": "High capacity"
+      },
+      "regen": {
+        "desc": "Smaller battery that recharges quickly. Stronger overboost.",
+        "name": "Fast regeneration"
+      }
+    },
+    "support": {
+      "magnetAnchor": {
+        "desc": "Clamps you to the floor: resists flips and adds push.",
+        "name": "Magnet anchor"
+      },
+      "selfRight": {
+        "desc": "Flip yourself back quickly when upside down (hold special).",
+        "name": "Self-righting"
+      },
+      "sensor": {
+        "desc": "Shows the opponent's weapon cooldown and adds a little damage.",
+        "name": "Sensor"
+      },
+      "shieldPulse": {
+        "desc": "Shockwave that pushes enemies away and halves damage briefly. Breaks grabs.",
+        "name": "Shield pulse"
+      },
+      "smokeScreen": {
+        "desc": "Dense smoke that confuses AI sensors.",
+        "name": "Smoke screen"
+      }
+    },
+    "weapon": {
+      "crusher": {
+        "desc": "Grabs and holds the opponent, dealing damage over time – carry them into a hazard!",
+        "name": "Crusher/claw"
+      },
+      "drum": {
+        "desc": "Vertical drum that throws opponents upward. Gyro effect slows turning.",
+        "name": "Drum spinner"
+      },
+      "flamethrower": {
+        "desc": "Sets the opponent on fire – damage over time.",
+        "name": "Flamethrower"
+      },
+      "flipper": {
+        "desc": "Pneumatic flipper that launches opponents and can flip them over. Energy hungry, long cooldown. Can self-right.",
+        "name": "Flipper"
+      },
+      "hSpinner": {
+        "desc": "Hold the weapon key to build RPM – damage scales with RPM. Recoil hits both robots.",
+        "name": "Horizontal spinner"
+      },
+      "hammer": {
+        "desc": "Overhead strike with high damage to top armour. Can self-right.",
+        "name": "Hammer/axe"
+      },
+      "lance": {
+        "desc": "Fast, long-reach pneumatic spike thrust.",
+        "name": "Lance/spike"
+      },
+      "magnet": {
+        "desc": "Pulls the opponent towards you and slows their drive.",
+        "name": "Electromagnet"
+      },
+      "saw": {
+        "desc": "Continuous damage on contact. Short reach.",
+        "name": "Saw"
+      },
+      "wedge": {
+        "desc": "No active damage, but superior pushing and a chance to get under the opponent. The weapon key triggers a ramming dash.",
+        "name": "Wedge/ram"
+      }
+    }
+  },
+  "pause": {
+    "forfeit": "Forfeit and leave",
+    "menu": "Menu",
+    "onlineNote": "Online matches can't be paused – the fight continues in the background.",
+    "quit": "Quit match",
+    "restart": "Restart",
+    "resume": "Resume",
+    "title": "Paused"
+  },
+  "practice": {
+    "dummy": "Training dummy",
+    "hazards": "Hazards and house robots",
+    "info": "You drive {name}. The dummy stands still and takes everything.",
+    "start": "Start practice",
+    "subtitle": "Infinite-HP dummy with visible damage numbers",
+    "title": "Practice arena"
+  },
+  "quick": {
+    "ai": "Opponent AI",
+    "opponent": "Opponent",
+    "personality": "Personality",
+    "rewardNote": "Quick matches give small rewards.",
+    "start": "Start",
+    "subtitle": "Choose arena, opponent and AI",
+    "title": "Quick match",
+    "you": "You drive: {name}"
+  },
+  "radar": {
+    "armor": "Armour",
+    "damage": "Damage",
+    "energy": "Energy",
+    "handling": "Handling",
+    "hp": "HP",
+    "speed": "Speed"
+  },
+  "results": {
+    "backToLobby": "Back to lobby",
+    "dealt": "Damage dealt",
+    "defeat": "Defeat",
+    "flips": "Flips",
+    "hp": "Status",
+    "judgeScores": "Judges' points: {a} – {b}",
+    "ko": {
+      "destroyed": "Destroyed",
+      "immobile": "Immobilised",
+      "pit": "In the pit",
+      "walkover": "Left"
+    },
+    "menu": "Main menu",
+    "nextLevel": "Next fight",
+    "nobody": "Nobody",
+    "reason": {
+      "draw": "Draw",
+      "judges": "Judges' decision",
+      "ko": "Knockout",
+      "pit": "Into the pit",
+      "walkover": "Walkover"
+    },
+    "rematch": "Rematch",
+    "repairNeeded": "Repairs cost ⛁ {cost} (in the garage or campaign map).",
+    "retry": "Try again",
+    "reward": {
+      "firstWin": "First win",
+      "flips": "Flip bonus",
+      "ko": "KO bonus",
+      "loss": "Participation",
+      "perfect": "Perfect fight",
+      "pit": "Pit bonus",
+      "quick": "Quick win",
+      "stars": "Three stars",
+      "win": "Victory"
+    },
+    "rewards": "Rewards",
+    "robot": "Robot",
+    "starsLabel": "{n} of 3 stars",
+    "stats": "Match stats",
+    "taken": "Damage taken",
+    "title": "Result",
+    "toMap": "Campaign map",
+    "total": "Total",
+    "unlocked": "Unlocked",
+    "victory": "Victory!",
+    "winner": "{name} wins!"
+  },
+  "save": {
+    "corruptText": "We couldn't read your save file. You can start over with a fresh save.",
+    "corruptTitle": "Save data is corrupted",
+    "reset": "Start over"
+  },
+  "settings": {
+    "accessHint": "All menus work with the keyboard (Tab, arrows, Enter, Esc). Hazards are shown with both colour and pattern.",
+    "cb": {
+      "deuteranopia": "Deuteranopia",
+      "off": "Off",
+      "protanopia": "Protanopia",
+      "tritanopia": "Tritanopia"
+    },
+    "colorBlind": "Colour-blind mode",
+    "damageNumbers": "Damage numbers",
+    "export": "Export save",
+    "exportBtn": "Download file",
+    "fps": "FPS counter",
+    "fullscreen": "Fullscreen",
+    "gamepadHint": "Gamepad: left stick/D-pad drives, A/RB = weapon, B/LB = special, X = boost, Start = pause. Gamepads are assigned automatically.",
+    "import": "Import save",
+    "importFailed": "The file is not a valid save.",
+    "imported": "Save imported!",
+    "language": "Language",
+    "pressKey": "Press a key …",
+    "qualities": {
+      "high": "High",
+      "low": "Low",
+      "medium": "Medium"
+    },
+    "quality": "Graphics quality",
+    "reduceMotion": "Reduce motion",
+    "repairCosts": "Hardcore: repair costs",
+    "repairHint": "Damage carries over between campaign fights and must be repaired with credits. The Mechanic difficulty always enables this.",
+    "reset": "Reset progress",
+    "resetBtn": "Reset",
+    "resetConfirm": "This deletes all credits, parts and campaign progress. Settings are kept.",
+    "resetDone": "Progress reset.",
+    "resetKeys": "Reset keyboard",
+    "shake": "Screen shake",
+    "tabs": {
+      "access": "Accessibility",
+      "audio": "Audio",
+      "controls": "Controls",
+      "data": "Data",
+      "general": "General",
+      "graphics": "Graphics"
+    },
+    "textScale": "Text size",
+    "title": "Settings",
+    "toggleFullscreen": "Toggle",
+    "touch": "Touch controls",
+    "touchModes": {
+      "auto": "Auto",
+      "off": "Off",
+      "on": "On"
+    },
+    "volume": {
+      "master": "Master volume",
+      "music": "Music",
+      "sfx": "Effects",
+      "ui": "Interface"
+    }
+  },
+  "setup": {
+    "arena": "Arena"
+  },
+  "shop": {
+    "bought": "{name} level {level} purchased!",
+    "buy": "Buy",
+    "errors": {
+      "credits": "Not enough credits.",
+      "equipped": "The part is equipped on a robot – swap it out first.",
+      "locked": "This part is not unlocked yet.",
+      "maxed": "Already at max level.",
+      "notOwned": "You don't own this part.",
+      "overweight": "That would make the robot overweight.",
+      "scrap": "Not enough scrap.",
+      "slots": "At most two support modules at once."
+    },
+    "sell": "Sell",
+    "sellConfirm": "Sell {name} for ⛁ {value}? All levels are lost.",
+    "sellTitle": "Sell part?",
+    "sold": "Part sold.",
+    "upgrade": "Upgrade"
+  },
+  "splash": {
+    "press": "Press any key to start",
+    "tagline": "Build your combat robot, upgrade it in the garage and smash rivals in trap-filled arenas.",
+    "title": "Title screen"
+  },
+  "stats": {
+    "accel": "Acceleration",
+    "armorFront": "Front armour",
+    "armorRear": "Rear armour",
+    "armorSide": "Side armour",
+    "armorTop": "Top armour",
+    "cooldown": "Cooldown",
+    "damage": "Damage",
+    "energyMax": "Energy",
+    "energyRegen": "Regeneration",
+    "flipResist": "Flip resist",
+    "hp": "Integrity (HP)",
+    "pushForce": "Push force",
+    "range": "Reach",
+    "topSpeed": "Top speed",
+    "turnRate": "Turn rate",
+    "weight": "Weight"
+  },
+  "tutorial": {
+    "boost": {
+      "text": "Hold {boost} while driving to boost. It uses energy – watch the blue bar.",
+      "title": "Boost"
+    },
+    "drive": {
+      "text": "Use {up} and {down} to drive forwards and backwards.",
+      "title": "Drive"
+    },
+    "ram": {
+      "text": "Ram Rusty Rex! Hits to the sides and rear deal more damage than to the front.",
+      "title": "Attack"
+    },
+    "rules": {
+      "text": "Destroy your opponent, push it into the pit once it opens, or win on judges' points. Stay still for 10 seconds and you're counted out – and keep out of the yellow corner zones (CPZ)!",
+      "title": "How to win"
+    },
+    "turn": {
+      "text": "Turn with {left} and {right}. The robot turns on the spot like a tank.",
+      "title": "Turn"
+    },
+    "weapon": {
+      "text": "Press {weapon} to use your weapon. The wedge performs a powerful ramming dash.",
+      "title": "Weapon"
+    }
+  },
+  "vs": {
+    "continue": "Press any key",
+    "label": "Fight card"
+  }
+}

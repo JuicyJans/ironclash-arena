@@ -1,0 +1,606 @@
+{
+  "ai": {
+    "berserker": "Berserk",
+    "bruiser": "Slåsskjempe",
+    "champion": "Mester",
+    "patient": "Tålmodig",
+    "pusher": "Dytter",
+    "rookie": "Nybegynner",
+    "speedster": "Fartsfantom",
+    "spinner": "Spinner-fanatiker",
+    "tactician": "Taktiker"
+  },
+  "arenas": {
+    "colosseum": {
+      "desc": "Flere groper, gulvflippere, veggsager og to husroboter.",
+      "name": "Kolosseum"
+    },
+    "foundry": {
+      "desc": "Flammestråler i gulvet og en kanal med smeltet metall.",
+      "name": "Støperiet"
+    },
+    "icefactory": {
+      "desc": "Glatt is, roterende plattform og en presse fra taket.",
+      "name": "Isfabrikken"
+    },
+    "scrapyard": {
+      "desc": "Løse objekter du kan dytte og knuse.",
+      "name": "Skraphaugen"
+    },
+    "workshop": {
+      "desc": "Oversiktlig, med gulvspikere og én husrobot.",
+      "name": "Verkstedet"
+    }
+  },
+  "campaign": {
+    "arena": "Arena",
+    "best": "Beste tid",
+    "boss": "SJEF",
+    "c01": "Første gnist",
+    "c02": "Kiletrøbbel",
+    "c03": "Sagbruket",
+    "c04": "Verkstedets herre",
+    "c05": "Glødende gulv",
+    "c06": "Virvelvind",
+    "c07": "To mot én",
+    "c08": "Smeltedigelen",
+    "c09": "Tynn is",
+    "c10": "Overturtall",
+    "c11": "Speilbildet",
+    "c12": "Høyspenning",
+    "c13": "Gamle fiender",
+    "c14": "Gjenfødt i ild",
+    "c15": "Jerntronen",
+    "damaged": "Roboten er {pct} % skadet.",
+    "details": "Kampdetaljer",
+    "difficulty": "Vanskelighetsgrad",
+    "fight": "Kjemp!",
+    "league": {
+      "bronze": "Bronseligaen",
+      "gold": "Gullligaen",
+      "master": "Mesterligaen",
+      "silver": "Sølvligaen"
+    },
+    "opponent": "Motstander",
+    "repair": "Reparer (⛁ {cost})",
+    "repaired": "Roboten er reparert!",
+    "reward": "Seierspremie",
+    "starRules": "★ Vinn · ★★ Vinn innen {par} s · ★★★ Vinn innen {par} s og ta under {dmg} % skade",
+    "subtitle": "Turneringsstigen · {stars}/{max} stjerner",
+    "title": "Kampanje"
+  },
+  "common": {
+    "back": "Tilbake",
+    "cancel": "Avbryt",
+    "continue": "Fortsett",
+    "credits": "Credits",
+    "locked": "Låst",
+    "scrap": "Skrapdeler",
+    "skip": "Hopp over",
+    "stars": "stjerner",
+    "tryAgain": "Prøv igjen"
+  },
+  "controls": {
+    "boost": "Turbo",
+    "down": "Bakover",
+    "drive": "Kjør",
+    "left": "Sving venstre",
+    "right": "Sving høyre",
+    "special": "Spesial",
+    "up": "Fremover",
+    "weapon": "Våpen"
+  },
+  "credits": {
+    "full": "Full liste i CREDITS.md.",
+    "game": "Spillet",
+    "libraries": "Åpen kildekode",
+    "made": "IRONCLASH ARENA – laget med TypeScript, Phaser og mye metallisk kjærlighet.",
+    "original": "Alle roboter, arenaer, navn og figurer er originale og fiktive.",
+    "procedural": "All grafikk, musikk og lyd genereres prosedyrisk i koden – ingen lisensierte ressurser.",
+    "title": "Kreditering"
+  },
+  "difficulty": {
+    "easy": "Lett",
+    "hard": "Hard",
+    "mechanic": "Mekaniker",
+    "normal": "Normal"
+  },
+  "error": {
+    "copied": "Feilloggen er kopiert.",
+    "copy": "Kopier feillogg",
+    "reload": "Last inn på nytt",
+    "resetSave": "Nullstill lagring",
+    "text": "Beklager! Spillet støtte på en uventet feil. Last inn på nytt – fremgangen din er lagret.",
+    "title": "Noe gikk i stykker"
+  },
+  "garage": {
+    "categories": "Delkategorier",
+    "chassisInfo": "Vektgrense {limit} kg · {hp} HP basis",
+    "decals": {
+      "bolt": "Lyn",
+      "checker": "Rutete",
+      "flames": "Flammer",
+      "none": "Ingen",
+      "number": "Nummer",
+      "skull": "Hodeskalle",
+      "stripes": "Striper"
+    },
+    "equip": "Monter",
+    "equipped": "MONTERT",
+    "equippedMsg": "{name} montert",
+    "hint": "Hold over en del for å se før/etter. Vektgrense: {limit} kg. Deler kan selges for 60 % av prisen.",
+    "level": "Nivå",
+    "levelOf": "Nivå {level} av {max}",
+    "loadouts": "Robotoppsett",
+    "overweight": "For tung! Fjern eller bytt deler for å komme under vektgrensen.",
+    "owned": "Du eier nivå {level} av {max}.",
+    "paint": {
+      "decal": "Dekal",
+      "led": "LED-farge",
+      "name": "Robotnavn",
+      "primary": "Hovedfarge",
+      "secondary": "Sekundærfarge"
+    },
+    "previewLabel": "3D-forhåndsvisning av {name}. Bruk piltastene for å rotere.",
+    "stats": "Egenskaper",
+    "subtitle": "Bygg, oppgrader og mal roboten din",
+    "tabs": {
+      "armor": "Rustning",
+      "chassis": "Chassis",
+      "drive": "Drivverk",
+      "paint": "Lakk",
+      "power": "Kraft",
+      "support": "Støtte",
+      "weapon": "Våpen"
+    },
+    "title": "Garasje",
+    "unequip": "Demonter",
+    "unlockHint": "Låses opp ved å vinne «{level}».",
+    "weight": "Vekt"
+  },
+  "host": {
+    "c04": {
+      "intro": "Velkommen til bronsefinalen! Sir Grindalot har styrt dette verkstedet i årevis – og hammeren hans har knust flere chassis enn vi kan telle. Hold deg unna fronten hans!",
+      "outro": "For en kamp! Bronsetrofeet er ditt. Neste stopp: Støperiet, der gulvet bokstavelig talt brenner!"
+    },
+    "c08": {
+      "intro": "Molten Maw venter i smeltedigelen. Kjevene den har kan holde en robot i flere sekunder – og den vet nøyaktig hvor flammene er.",
+      "outro": "Sølvligaen er erobret! Ta på deg pigger – Isfabrikken er glattere enn den ser ut."
+    },
+    "c12": {
+      "intro": "Voltress tilpasser seg alt du gjør. Hun har studert hver kamp du har kjempet. Overrask henne!",
+      "outro": "Gull! Bare Kolosseum står igjen – og der er hver felle aktiv samtidig."
+    },
+    "c13": {
+      "intro": "Velkommen til Kolosseum! Gamle fiender har bygget seg sterkere. Klarer du hele gauntleten?"
+    },
+    "c15": {
+      "intro": "Dette er det. Iron Sovereign har aldri tapt i denne arenaen. Publikum holder pusten …",
+      "outro": "UTROLIG! Vi har en ny mester! Navnet ditt blir sveiset inn i Jerntronen for alltid!"
+    },
+    "name": "Programleder Rita Rivet"
+  },
+  "house": {
+    "frostbite": "Frostbitt",
+    "furnace": "Ovnsmester Fred",
+    "magpie": "Skjæra",
+    "reaper": "Høstmaskinen",
+    "spanner": "Sersjant Skiftenøkkel",
+    "warden": "Vokteren"
+  },
+  "hud": {
+    "disconnected": "Tilkoblingen ble brutt – venter",
+    "driveDamaged": "DRIVVERK SKADET",
+    "energy": "Energi",
+    "fight": "Kamp",
+    "flipped": "VELTET",
+    "go": "KJØR!",
+    "immobile": "IMMOBIL {s}",
+    "judges": "Dommerne: {a} – {b}",
+    "ko": "KO",
+    "minimap": "Minikart over arenaen",
+    "moveHint": "Beveg deg – ellers blir du telt ut!",
+    "pitOpen": "Gropen er åpen!",
+    "practice": "Øving",
+    "selfRightHint": "Hold {weapon} / {special} for å snu deg!",
+    "special": "Spesial {s}s",
+    "timeLeft": "Tid igjen",
+    "waitingHost": "Venter på verten …",
+    "weaponDamaged": "VÅPEN SKADET",
+    "you": "DEG"
+  },
+  "local": {
+    "fair": "Rettferdig modus",
+    "fairHint": "Utjevner budsjettforskjeller med en liten HP-justering, så dyre bygg ikke vinner automatisk.",
+    "noPad": "Ingen gamepad – tastatur",
+    "player": "Spiller {n}",
+    "start": "Start kamp",
+    "subtitle": "To spillere på samme maskin",
+    "title": "Lokal 2-spiller"
+  },
+  "menu": {
+    "campaign": "Kampanje",
+    "credits": "Kreditering",
+    "footer": "Ingen sporing · Lagres lokalt i nettleseren",
+    "garage": "Garasje",
+    "garageHint": "Bygg og oppgrader",
+    "local": "Lokal 2-spiller",
+    "localHint": "Delt tastatur / gamepad",
+    "online": "Online",
+    "onlineHint": "Privat rom med kode",
+    "practice": "Øvingsarena",
+    "practiceHint": "Test våpen og bygg",
+    "quick": "Hurtigkamp",
+    "quickHint": "Én kamp mot AI",
+    "record": "{wins} seire på {matches} kamper",
+    "settings": "Innstillinger",
+    "title": "Hovedmeny",
+    "yourRobot": "Din robot"
+  },
+  "online": {
+    "code": "Romkode",
+    "connecting": "Kobler til",
+    "copied": "Lenken er kopiert!",
+    "copyLink": "Kopier lenke",
+    "create": "Lag rom",
+    "createBtn": "Lag rom",
+    "createHint": "Få en 6-tegns kode og en lenke du kan dele.",
+    "errorTitle": "Kunne ikke koble til",
+    "errors": {
+      "closed": "Den andre spilleren forlot rommet.",
+      "codeTaken": "Romkoden er opptatt – prøv igjen.",
+      "full": "Rommet er fullt.",
+      "network": "Nettverksfeil. Sjekk tilkoblingen og prøv igjen.",
+      "notFound": "Fant ikke rommet. Sjekk koden.",
+      "version": "Dere har ulike spillversjoner. Last inn siden på nytt begge to."
+    },
+    "hostStarts": "Verten starter kampen når begge er klare.",
+    "join": "Bli med",
+    "joinBtn": "Bli med",
+    "joinHint": "Skriv inn romkoden fra vennen din.",
+    "leave": "Forlat rom",
+    "name": "Spillernavn",
+    "notReady": "IKKE KLAR",
+    "p2pNote": "Tilkoblingen går direkte mellom spillerne. Bak strenge brannmurer kan det trengs en TURN-server (se README).",
+    "ping": "Ping {ms} ms",
+    "players": "Spillere",
+    "pleaseWait": "Vent litt …",
+    "ready": "KLAR",
+    "readyToggle": "Jeg er klar",
+    "robot": "Robot",
+    "room": "Rom",
+    "start": "Start kamp",
+    "subtitle": "Privat rom med romkode – direkte mellom nettlesere (WebRTC)",
+    "title": "Online",
+    "waiting": "Venter på motstander …",
+    "you": "Deg"
+  },
+  "parts": {
+    "armor": {
+      "balanced": {
+        "desc": "Lik beskyttelse rundt hele roboten. Nivåer: bløtt stål → aluminium → herdet stål → titan → komposittkeramikk.",
+        "name": "Jevn rustning"
+      },
+      "frontHeavy": {
+        "desc": "Tykk frontplate som tåler frontalangrep og dytter bedre – men baksiden er sårbar.",
+        "name": "Tung front, lett bak"
+      }
+    },
+    "chassis": {
+      "heavy": "Tungt chassis",
+      "light": "Lett chassis",
+      "medium": "Middels chassis"
+    },
+    "drive": {
+      "shuffler": {
+        "desc": "Gående ben: enormt grep og dyttekraft, men tregt og tungt.",
+        "name": "Shuffler"
+      },
+      "tracks": {
+        "desc": "Mye grep og dyttekraft, litt tregere.",
+        "name": "Belter"
+      },
+      "wheels": {
+        "desc": "Rask og smidig, men middels grep. Lett.",
+        "name": "Hjul"
+      }
+    },
+    "power": {
+      "capacity": {
+        "desc": "Stort batteri for lange kamper og mye turbo.",
+        "name": "Høy kapasitet"
+      },
+      "regen": {
+        "desc": "Mindre batteri som lades raskt opp igjen. Kraftigere overboost.",
+        "name": "Rask regenerering"
+      }
+    },
+    "support": {
+      "magnetAnchor": {
+        "desc": "Fester roboten til gulvet: motstår velting og gir mer dyttekraft.",
+        "name": "Magnetfeste"
+      },
+      "selfRight": {
+        "desc": "Snu deg raskt tilbake når du er veltet (hold spesialtasten).",
+        "name": "Selvretting"
+      },
+      "sensor": {
+        "desc": "Viser motstanderens kjøletid og gir litt ekstra skade.",
+        "name": "Sensor"
+      },
+      "shieldPulse": {
+        "desc": "Sjokkbølge som dytter motstandere bort og halverer skaden et øyeblikk. Bryter grep.",
+        "name": "Skjoldpuls"
+      },
+      "smokeScreen": {
+        "desc": "Tett røyk som forvirrer AI-sensorer.",
+        "name": "Røykskjerm"
+      }
+    },
+    "weapon": {
+      "crusher": {
+        "desc": "Griper og holder motstanderen, gir skade over tid – kjør dem inn i en felle!",
+        "name": "Knuser/klo"
+      },
+      "drum": {
+        "desc": "Vertikal trommel som kaster motstanderen oppover. Gyroeffekten gjør svingene tregere.",
+        "name": "Trommel"
+      },
+      "flamethrower": {
+        "desc": "Setter fyr på motstanderen – skade over tid.",
+        "name": "Flammekaster"
+      },
+      "flipper": {
+        "desc": "Pneumatisk flipper som kaster motstanderen i luften og kan velte den. Energikrevende, lang kjøletid. Kan rette seg opp selv.",
+        "name": "Flipper"
+      },
+      "hSpinner": {
+        "desc": "Hold våpentasten for å bygge turtall – skaden skalerer med turtallet. Rekylen rammer begge.",
+        "name": "Horisontal spinner"
+      },
+      "hammer": {
+        "desc": "Slag ovenfra med høy skade mot topprustningen. Kan rette seg opp selv.",
+        "name": "Hammer/øks"
+      },
+      "lance": {
+        "desc": "Raskt, langt støt med pneumatisk pigg.",
+        "name": "Lanse/pigg"
+      },
+      "magnet": {
+        "desc": "Trekker motstanderen mot deg og bremser drivverket deres.",
+        "name": "Elektromagnet"
+      },
+      "saw": {
+        "desc": "Kontinuerlig skade ved kontakt. Kort rekkevidde.",
+        "name": "Sag"
+      },
+      "wedge": {
+        "desc": "Ingen aktiv skade, men overlegen dytting og sjanse til å komme under motstanderen. Våpentasten gir et ramme-støt.",
+        "name": "Kile/ramme"
+      }
+    }
+  },
+  "pause": {
+    "forfeit": "Gi opp og forlat",
+    "menu": "Meny",
+    "onlineNote": "Online-kamper kan ikke pauses – kampen fortsetter i bakgrunnen.",
+    "quit": "Avslutt kamp",
+    "restart": "Start på nytt",
+    "resume": "Fortsett",
+    "title": "Pause"
+  },
+  "practice": {
+    "dummy": "Treningsdukke",
+    "hazards": "Feller og husroboter",
+    "info": "Du kjører {name}. Dukken står i ro og tåler alt.",
+    "start": "Start øving",
+    "subtitle": "Uendelig HP-dummy og synlige skadetall",
+    "title": "Øvingsarena"
+  },
+  "quick": {
+    "ai": "Motstander-AI",
+    "opponent": "Motstander",
+    "personality": "Personlighet",
+    "rewardNote": "Hurtigkamper gir små belønninger.",
+    "start": "Start",
+    "subtitle": "Velg arena, motstander og AI",
+    "title": "Hurtigkamp",
+    "you": "Du kjører: {name}"
+  },
+  "radar": {
+    "armor": "Rustning",
+    "damage": "Skade",
+    "energy": "Energi",
+    "handling": "Kontroll",
+    "hp": "HP",
+    "speed": "Fart"
+  },
+  "results": {
+    "backToLobby": "Tilbake til lobbyen",
+    "dealt": "Skade gitt",
+    "defeat": "Tap",
+    "flips": "Velt",
+    "hp": "Status",
+    "judgeScores": "Dommerpoeng: {a} – {b}",
+    "ko": {
+      "destroyed": "Ødelagt",
+      "immobile": "Immobil",
+      "pit": "I gropen",
+      "walkover": "Forlot"
+    },
+    "menu": "Hovedmeny",
+    "nextLevel": "Neste kamp",
+    "nobody": "Ingen",
+    "reason": {
+      "draw": "Uavgjort",
+      "judges": "Dommeravgjørelse",
+      "ko": "Knockout",
+      "pit": "Ned i gropen",
+      "walkover": "Walkover"
+    },
+    "rematch": "Omkamp",
+    "repairNeeded": "Reparasjon koster ⛁ {cost} (gjøres i garasjen eller kampanjekartet).",
+    "retry": "Prøv igjen",
+    "reward": {
+      "firstWin": "Første seier",
+      "flips": "Velt-bonus",
+      "ko": "KO-bonus",
+      "loss": "Deltakelse",
+      "perfect": "Perfekt kamp",
+      "pit": "Gropen-bonus",
+      "quick": "Rask seier",
+      "stars": "Tre stjerner",
+      "win": "Seier"
+    },
+    "rewards": "Belønninger",
+    "robot": "Robot",
+    "starsLabel": "{n} av 3 stjerner",
+    "stats": "Kampstatistikk",
+    "taken": "Skade tatt",
+    "title": "Resultat",
+    "toMap": "Kampanjekart",
+    "total": "Totalt",
+    "unlocked": "Låst opp",
+    "victory": "Seier!",
+    "winner": "{name} vinner!"
+  },
+  "save": {
+    "corruptText": "Vi klarte ikke å lese lagringsfilen. Du kan starte på nytt med en ny lagring.",
+    "corruptTitle": "Lagringen er skadet",
+    "reset": "Start på nytt"
+  },
+  "settings": {
+    "accessHint": "Alle menyer kan brukes med tastatur (Tab, piltaster, Enter, Esc). Faresoner vises både med farge og mønster.",
+    "cb": {
+      "deuteranopia": "Deuteranopi",
+      "off": "Av",
+      "protanopia": "Protanopi",
+      "tritanopia": "Tritanopi"
+    },
+    "colorBlind": "Fargeblind-modus",
+    "damageNumbers": "Skadetall",
+    "export": "Eksporter lagring",
+    "exportBtn": "Last ned fil",
+    "fps": "FPS-teller",
+    "fullscreen": "Fullskjerm",
+    "gamepadHint": "Gamepad: venstre spak/D-pad kjører, A/RB = våpen, B/LB = spesial, X = turbo, Start = pause. Gamepads tildeles automatisk.",
+    "import": "Importer lagring",
+    "importFailed": "Filen er ikke en gyldig lagring.",
+    "imported": "Lagringen er importert!",
+    "language": "Språk",
+    "pressKey": "Trykk en tast …",
+    "qualities": {
+      "high": "Høy",
+      "low": "Lav",
+      "medium": "Middels"
+    },
+    "quality": "Grafikkvalitet",
+    "reduceMotion": "Reduser bevegelse",
+    "repairCosts": "Hardcore: reparasjonskostnader",
+    "repairHint": "Skade følger med mellom kampanjekamper og må repareres for credits. «Mekaniker»-vanskelighetsgrad slår alltid dette på.",
+    "reset": "Nullstill fremgang",
+    "resetBtn": "Nullstill",
+    "resetConfirm": "Dette sletter alle credits, deler og kampanjefremgang. Innstillinger beholdes.",
+    "resetDone": "Fremgangen er nullstilt.",
+    "resetKeys": "Tilbakestill tastatur",
+    "shake": "Skjermristing",
+    "tabs": {
+      "access": "Tilgjengelighet",
+      "audio": "Lyd",
+      "controls": "Kontroller",
+      "data": "Data",
+      "general": "Generelt",
+      "graphics": "Grafikk"
+    },
+    "textScale": "Tekststørrelse",
+    "title": "Innstillinger",
+    "toggleFullscreen": "Slå av/på",
+    "touch": "Berøringskontroller",
+    "touchModes": {
+      "auto": "Auto",
+      "off": "Av",
+      "on": "På"
+    },
+    "volume": {
+      "master": "Hovedvolum",
+      "music": "Musikk",
+      "sfx": "Effekter",
+      "ui": "Grensesnitt"
+    }
+  },
+  "setup": {
+    "arena": "Arena"
+  },
+  "shop": {
+    "bought": "{name} nivå {level} kjøpt!",
+    "buy": "Kjøp",
+    "errors": {
+      "credits": "Ikke nok credits.",
+      "equipped": "Delen er montert på en robot – bytt den ut først.",
+      "locked": "Delen er ikke låst opp ennå.",
+      "maxed": "Allerede på maks nivå.",
+      "notOwned": "Du eier ikke denne delen.",
+      "overweight": "Det ville gjort roboten for tung.",
+      "scrap": "Ikke nok skrapdeler.",
+      "slots": "Maks to støttemoduler samtidig."
+    },
+    "sell": "Selg",
+    "sellConfirm": "Selge {name} for ⛁ {value}? Alle nivåer går tapt.",
+    "sellTitle": "Selge del?",
+    "sold": "Delen er solgt.",
+    "upgrade": "Oppgrader"
+  },
+  "splash": {
+    "press": "Trykk en tast for å starte",
+    "tagline": "Bygg kamproboten din, oppgrader den i garasjen og knus konkurrentene i arenaer fulle av feller.",
+    "title": "Tittelskjerm"
+  },
+  "stats": {
+    "accel": "Akselerasjon",
+    "armorFront": "Rustning foran",
+    "armorRear": "Rustning bak",
+    "armorSide": "Rustning side",
+    "armorTop": "Rustning topp",
+    "cooldown": "Kjøletid",
+    "damage": "Skade",
+    "energyMax": "Energi",
+    "energyRegen": "Regenerering",
+    "flipResist": "Anti-velt",
+    "hp": "Integritet (HP)",
+    "pushForce": "Dyttekraft",
+    "range": "Rekkevidde",
+    "topSpeed": "Toppfart",
+    "turnRate": "Svingrate",
+    "weight": "Vekt"
+  },
+  "tutorial": {
+    "boost": {
+      "text": "Hold {boost} mens du kjører for turbo. Den bruker energi – følg med på den blå linjen.",
+      "title": "Turbo"
+    },
+    "drive": {
+      "text": "Bruk {up} og {down} for å kjøre fremover og bakover.",
+      "title": "Kjør"
+    },
+    "ram": {
+      "text": "Ram Rusty Rex! Treff i siden og bakfra gjør mer skade enn i fronten.",
+      "title": "Angrip"
+    },
+    "rules": {
+      "text": "Ødelegg motstanderen, dytt den i gropen når den åpnes, eller vinn på dommerpoeng. Står du stille i 10 sekunder blir du telt ut – og hold deg unna de gule hjørnesonene (CPZ)!",
+      "title": "Slik vinner du"
+    },
+    "turn": {
+      "text": "Sving med {left} og {right}. Roboten svinger på stedet som en stridsvogn.",
+      "title": "Sving"
+    },
+    "weapon": {
+      "text": "Trykk {weapon} for å bruke våpenet ditt. Kilen gir et kraftig ramme-støt.",
+      "title": "Våpen"
+    }
+  },
+  "vs": {
+    "continue": "Trykk en tast",
+    "label": "Kampoppstilling"
+  }
+}

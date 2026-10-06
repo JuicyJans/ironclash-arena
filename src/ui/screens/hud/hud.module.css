@@ -1,0 +1,336 @@
+.hud {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  font-family: var(--f-heading);
+}
+.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 11%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1.5em;
+  padding: 0.8em 1.6em 0;
+  background: linear-gradient(180deg, rgba(5, 6, 8, 0.85), rgba(5, 6, 8, 0));
+}
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+}
+.right {
+  align-items: flex-end;
+}
+.card {
+  width: min(100%, 30em);
+  display: grid;
+  gap: 0.25em;
+}
+.nameRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
+  font-weight: 700;
+  font-size: 1.25em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.right .nameRow {
+  flex-direction: row-reverse;
+}
+.badge {
+  font-size: 0.65em;
+  padding: 0.05em 0.45em;
+  color: #111;
+}
+.hp {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  gap: 2px;
+  height: 1.05em;
+}
+.right .hp {
+  direction: rtl;
+}
+.seg {
+  background: #2a2f37;
+  transform: skewX(-18deg);
+  transition: background 120ms;
+}
+.segOn {
+  background: linear-gradient(180deg, #7ef0a8, #2fb866);
+}
+.segMid {
+  background: linear-gradient(180deg, #ffe07a, #e5a90f);
+}
+.segLow {
+  background: linear-gradient(180deg, #ff8a7a, #e0362a);
+  animation: pulse 0.6s infinite;
+}
+.bars {
+  display: grid;
+  grid-template-columns: 1fr 10em;
+  gap: 0.6em;
+  align-items: center;
+  font-size: 0.8em;
+}
+.right .bars {
+  grid-template-columns: 10em 1fr;
+}
+.right .bars > :first-child {
+  order: 2;
+}
+.thin {
+  height: 0.45em;
+  background: #22262d;
+  position: relative;
+  overflow: hidden;
+}
+.thinFill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: var(--c-cyan);
+}
+.right .thinFill {
+  inset: 0 0 0 auto;
+}
+.weapon {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  color: var(--c-steel-light);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.right .weapon {
+  justify-content: flex-end;
+}
+.ready {
+  color: var(--c-success);
+}
+.cool {
+  color: var(--c-text-dim);
+}
+.status {
+  display: flex;
+  gap: 0.4em;
+  font-size: 0.75em;
+  min-height: 1.3em;
+}
+.right .status {
+  justify-content: flex-end;
+}
+.chip {
+  padding: 0.05em 0.45em;
+  background: rgba(255, 90, 31, 0.85);
+  color: #111;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.chipWarn {
+  background: var(--c-hazard);
+}
+.timer {
+  text-align: center;
+  font-weight: 700;
+  font-size: 3em;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 0 #000;
+  min-width: 3.4em;
+}
+.timerLow {
+  color: var(--c-signal);
+  animation: pulse 1s infinite;
+}
+.timerSub {
+  font-size: 0.32em;
+  color: var(--c-text-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 0.3em;
+}
+.center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 38%;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.count {
+  font-size: 9em;
+  color: var(--c-hazard);
+  text-shadow:
+    0 0 40px rgba(255, 194, 26, 0.6),
+    0 8px 0 #000;
+  animation: count-pop 1s ease-out both;
+}
+@keyframes count-pop {
+  0% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+  20% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+.warn {
+  font-size: 2.6em;
+  color: var(--c-danger);
+  letter-spacing: 0.1em;
+  text-shadow: 0 4px 0 #000;
+}
+.warnBig {
+  font-size: 2.2em;
+  display: block;
+}
+.minimap {
+  position: absolute;
+  right: 1.2em;
+  bottom: 1em;
+  width: 13em;
+  background: rgba(10, 12, 15, 0.75);
+  border: 1px solid rgba(138, 147, 163, 0.3);
+  padding: 0.3em;
+}
+.tutorial {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+  min-width: 34em;
+  max-width: 60%;
+  padding: 0.9em 1.4em;
+  background: rgba(14, 16, 20, 0.92);
+  border: 1px solid var(--c-cyan);
+  box-shadow: var(--glow-cyan);
+  font-family: var(--f-body);
+  pointer-events: auto;
+}
+.tutorialTitle {
+  font-family: var(--f-heading);
+  color: var(--c-cyan);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.progress {
+  height: 0.35em;
+  background: #22262d;
+  margin-top: 0.6em;
+}
+.progressFill {
+  height: 100%;
+  background: var(--c-cyan);
+  transition: width 150ms;
+}
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(200, 20, 20, 0.45));
+  animation: pulse 1.2s infinite;
+}
+.debug {
+  position: absolute;
+  left: 1em;
+  bottom: 1em;
+  font-family: ui-monospace, monospace;
+  font-size: 0.75em;
+  color: var(--c-hazard);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.4em 0.6em;
+  white-space: pre;
+}
+.net {
+  position: absolute;
+  top: 11.5%;
+  right: 1.6em;
+  font-size: 0.8em;
+  color: var(--c-text-dim);
+}
+.pauseBtn {
+  position: absolute;
+  top: 5.6em;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: auto;
+  background: rgba(20, 22, 26, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--c-text);
+  padding: 0.2em 0.9em;
+  font-family: var(--f-heading);
+  font-weight: 700;
+  cursor: pointer;
+}
+.touch {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.stick {
+  position: absolute;
+  left: 3%;
+  bottom: 6%;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  border: 2px solid rgba(34, 211, 238, 0.4);
+  background: rgba(10, 12, 15, 0.35);
+  pointer-events: auto;
+  touch-action: none;
+}
+.knob {
+  position: absolute;
+  width: 4.5em;
+  height: 4.5em;
+  left: calc(50% - 2.25em);
+  top: calc(50% - 2.25em);
+  border-radius: 50%;
+  background: rgba(34, 211, 238, 0.55);
+}
+.buttons {
+  position: absolute;
+  right: 3%;
+  bottom: 6%;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.8em;
+  pointer-events: auto;
+}
+.tbtn {
+  width: 5.5em;
+  height: 5.5em;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  background: rgba(10, 12, 15, 0.5);
+  color: var(--c-text);
+  font-family: var(--f-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  touch-action: none;
+  user-select: none;
+}
+.tbtnMain {
+  width: 7em;
+  height: 7em;
+  border-color: var(--c-signal);
+  grid-row: span 2;
+  align-self: center;
+}
+.tbtn[data-on='true'] {
+  background: rgba(255, 90, 31, 0.6);
+}
