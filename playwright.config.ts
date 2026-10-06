@@ -6,6 +6,8 @@ export default defineConfig({
   retries: process.env.CI ? 1 : 0,
   use: {
     baseURL: 'http://localhost:4173',
+    // The game picks its language from the browser; the smoke tests use the Norwegian default.
+    locale: 'nb-NO',
     trace: 'retain-on-failure',
   },
   projects: [

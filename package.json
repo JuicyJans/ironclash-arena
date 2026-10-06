@@ -2,7 +2,7 @@
   "name": "ironclash-arena",
   "private": true,
   "version": "1.0.0",
-  "description": "IRONCLASH ARENA – a top-down 2.5D combat robot arena game for the browser.",
+  "description": "IRONCLASH ARENA \u2013 a top-down 2.5D combat robot arena game for the browser.",
   "type": "module",
   "license": "MIT",
   "engines": {
@@ -22,7 +22,9 @@
     "typecheck": "tsc --noEmit",
     "sim": "tsx scripts/balanceSim.ts",
     "assets": "tsx scripts/renderAssets.ts",
-    "prepare": "husky"
+    "prepare": "husky",
+    "docs:balance": "tsx scripts/balanceDoc.ts",
+    "i18n": "python3 scripts/i18n/build.py"
   },
   "lint-staged": {
     "*.{ts,tsx}": [

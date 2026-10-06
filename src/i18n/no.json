@@ -116,6 +116,8 @@
   "garage": {
     "categories": "Delkategorier",
     "chassisInfo": "Vektgrense {limit} kg · {hp} HP basis",
+    "compare": "Egenskaper nå",
+    "compareActive": "Før → etter (valgt del)",
     "decals": {
       "bolt": "Lyn",
       "checker": "Rutete",

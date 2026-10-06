@@ -630,3 +630,22 @@
   white-space: pre-wrap;
   user-select: text;
 }
+
+.compare {
+  margin-top: 0.8em;
+  padding-top: 0.6em;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.compare > div {
+  columns: 2;
+  column-gap: 2em;
+}
+.compare > div > div {
+  break-inside: avoid;
+}
+.compareTitle {
+  font-size: 0.9em;
+  letter-spacing: 0.12em;
+  color: var(--c-text-dim);
+  margin: 0 0 0.4em;
+}

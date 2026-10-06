@@ -59,7 +59,7 @@ export function MainMenu() {
         />
       </div>
       <div class={`${css.body} ${css.menuGrid}`}>
-        <nav class={css.menuList} aria-label={t('menu.title')}>
+        <nav class={css.menuList} aria-label={t('menu.title')} data-arrow-nav>
           {items.map((it, i) => (
             <Button
               key={it.id}

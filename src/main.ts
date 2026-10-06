@@ -10,6 +10,7 @@ import { netLobby } from './net/session';
 import { applySettings, saveStore, startOnlineMatch } from './state/actions';
 import { store } from './state/store';
 import { App } from './ui/App';
+import { installMenuNavigation } from './ui/menuNavigation';
 
 function boot(): void {
   const browserLang = navigator.language.toLowerCase().startsWith('en') ? 'en' : 'no';
@@ -42,6 +43,7 @@ function boot(): void {
   const uiRoot = document.getElementById('ui-root');
   if (!canvasRoot || !uiRoot) throw new Error('Missing root elements');
   createGame(canvasRoot);
+  installMenuNavigation();
   render(h(App, {}), uiRoot);
 }
 

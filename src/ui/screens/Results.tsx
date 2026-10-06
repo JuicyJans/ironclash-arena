@@ -28,9 +28,11 @@ function useCountUp(target: number, delayMs: number): number {
       if (p < 1) raf = requestAnimationFrame(step);
     };
     raf = requestAnimationFrame(step);
-    const ticks = setInterval(() => coin(), 150);
+    let ticks: ReturnType<typeof setInterval> | undefined;
+    const begin = setTimeout(() => {
+      if (target > 0) ticks = setInterval(() => coin(), 150);
+    }, delayMs);
     const stop = setTimeout(() => clearInterval(ticks), delayMs + dur);
-    const begin = setTimeout(() => undefined, delayMs);
     return () => {
       cancelAnimationFrame(raf);
       clearInterval(ticks);

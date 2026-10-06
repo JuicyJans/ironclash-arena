@@ -149,7 +149,6 @@ export function Garage() {
           </Panel>
           <Panel title={t('garage.stats')}>
             <StatRadar stats={stats} next={nextStats} />
-            <StatList stats={stats} next={nextStats} />
           </Panel>
         </div>
 
@@ -167,6 +166,12 @@ export function Garage() {
           {tab === 'paint' && <PaintTab profile={profile} index={index} />}
           {tab !== 'chassis' && tab !== 'paint' && (
             <PartsTab key={tab} category={tab} profile={profile} index={index} onPreview={setPreview} />
+          )}
+          {tab !== 'paint' && (
+            <section class={css.compare} aria-label={t('garage.compare')}>
+              <h4 class={css.compareTitle}>{nextStats ? t('garage.compareActive') : t('garage.compare')}</h4>
+              <StatList stats={stats} next={nextStats} />
+            </section>
           )}
           <p class={css.muted} style={{ fontSize: '0.8em', marginTop: '0.6em' }}>
             {t('garage.hint', { limit: CHASSIS[loadout.chassis]?.weightLimit ?? 0 })}

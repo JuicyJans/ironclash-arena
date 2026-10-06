@@ -116,6 +116,8 @@
   "garage": {
     "categories": "Part categories",
     "chassisInfo": "Weight limit {limit} kg · {hp} base HP",
+    "compare": "Current stats",
+    "compareActive": "Before → after (selected part)",
     "decals": {
       "bolt": "Bolt",
       "checker": "Checker",

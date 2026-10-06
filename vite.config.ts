@@ -19,7 +19,7 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       injectRegister: 'auto',
-      includeAssets: ['favicon.svg', 'favicon.ico', 'apple-touch-icon.png', 'og-image.png'],
+      includeAssets: ['favicon.svg', 'favicon.ico', 'apple-touch-icon.png'],
       manifest: {
         name: 'IRONCLASH ARENA',
         short_name: 'IronClash',
@@ -43,6 +43,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2,webmanifest}'],
+        globIgnores: ['**/og-image.*'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
       },
     }),
@@ -65,7 +66,13 @@ export default defineConfig({
     environment: 'node',
     coverage: {
       provider: 'v8',
-      include: ['src/core/**/*.ts', 'src/net/protocol.ts', 'src/net/codec.ts', 'src/net/netEvents.ts', 'src/net/snapshot.ts'],
+      include: [
+        'src/core/**/*.ts',
+        'src/net/protocol.ts',
+        'src/net/codec.ts',
+        'src/net/netEvents.ts',
+        'src/net/snapshot.ts',
+      ],
       reporter: ['text-summary', 'text'],
       thresholds: { lines: 70, statements: 70, functions: 70, branches: 60 },
     },
