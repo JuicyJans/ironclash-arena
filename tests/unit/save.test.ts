@@ -81,3 +81,17 @@ describe('save system', () => {
     expect(() => store.save(defaultSave())).not.toThrow();
   });
 });
+
+describe('default key maps', () => {
+  it('give both local players distinct keys (ghosting-friendly, no overlap)', async () => {
+    const { DEFAULT_KEYMAPS } = await import('../../src/core/save/defaults');
+    const p1 = Object.values(DEFAULT_KEYMAPS.p1);
+    const p2 = Object.values(DEFAULT_KEYMAPS.p2);
+    expect(new Set(p1).size).toBe(p1.length);
+    expect(new Set(p2).size).toBe(p2.length);
+    expect(p1.filter((k) => p2.includes(k))).toEqual([]);
+    // Player 1 lives on the left half of the keyboard, player 2 on arrows/right modifiers.
+    expect(p1.every((k) => /^(Key[WASDEQ]|Space|ShiftLeft|ControlLeft)$/.test(k))).toBe(true);
+    expect(p2.every((k) => /^(Arrow\w+|Enter|ShiftRight|ControlRight|Numpad\w+)$/.test(k))).toBe(true);
+  });
+});

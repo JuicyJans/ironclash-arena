@@ -63,7 +63,10 @@ export class ArenaScene extends Phaser.Scene {
       this.session.config,
       this.controller.stats,
       this.controller.events,
-      { quality: settings.graphics, damageNumbers: settings.damageNumbers },
+      {
+        quality: settings.graphics,
+        damageNumbers: settings.damageNumbers || this.session.kind === 'practice',
+      },
       {
         shake: (i) => this.shake(i),
         hitStop: (ms) => {

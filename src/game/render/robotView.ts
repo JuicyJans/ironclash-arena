@@ -37,6 +37,7 @@ export class RobotSpriteView {
   private spin = 0;
   private fireAnim = 0;
   private scratchCount = 0;
+  private loosePlates = 0;
   readonly art: RobotArt;
   readonly weapon: WeaponType;
 
@@ -115,6 +116,30 @@ export class RobotSpriteView {
     }
   }
 
+  /** Bent, half-detached armour plates appear as the robot falls apart. */
+  private updateLoosePlates(frac: number): void {
+    const wanted = frac < 0.25 ? 2 : frac < 0.5 ? 1 : 0;
+    while (this.loosePlates < wanted) {
+      const side = this.loosePlates === 0 ? 1 : -1;
+      const L = this.art.L;
+      const W = this.art.W;
+      const x = (this.loosePlates === 0 ? -0.15 : 0.2) * L;
+      const y = side * (W / 2 - 2);
+      this.scratches.fillStyle(0x6b7380, 1);
+      this.scratches.lineStyle(1, 0x111214, 0.9);
+      const pts = [
+        { x: x - 9, y },
+        { x: x + 9, y },
+        { x: x + 12, y: y + side * 9 },
+        { x: x - 4, y: y + side * 12 },
+      ];
+      this.scratches.fillPoints(pts, true);
+      this.scratches.strokePoints(pts, true);
+      this.scratches.fillStyle(0x2a2d33, 1).fillCircle(x - 6, y + side * 2, 1.6);
+      this.loosePlates++;
+    }
+  }
+
   onFire(): void {
     this.fireAnim = 1;
   }
@@ -158,6 +183,16 @@ export class RobotSpriteView {
     this.animateWeapon(s, dt);
 
     this.ring.clear();
+    // Telegraph: a pulsing hazard-yellow arc in front of the robot while a strike winds up.
+    if (s.weaponPhase === 1 && s.alive) {
+      const reach = this.art.L / 2 + 18;
+      const pulse = 0.55 + 0.45 * Math.sin(performance.now() / 45);
+      this.ring.lineStyle(4, 0xffc21a, pulse);
+      this.ring.beginPath();
+      this.ring.arc(c.x, c.y, reach, s.angle - 0.6, s.angle + 0.6);
+      this.ring.strokePath();
+    }
+    this.updateLoosePlates(s.hp / maxHp);
     if (s.shield) {
       this.ring.lineStyle(3, 0x22d3ee, 0.8).strokeCircle(c.x, c.y, this.art.L * 0.9);
     }
