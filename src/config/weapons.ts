@@ -30,6 +30,9 @@ export interface WeaponSpec {
   /** Magnet: pull speed and drive slow multiplier applied to the target. */
   pull?: number;
   slow?: number;
+  /** Magnet: energy drained from the target per second and rotor speed lost per second. */
+  drain?: number;
+  rpmDrain?: number;
   /** Wedge: chance to get under the opponent on a frontal impact and dash speed. */
   underChance?: number;
   dash?: number;
@@ -51,14 +54,14 @@ export const WEAPONS: Record<WeaponType, WeaponSpec> = {
     windup: 0.15,
     strike: 0.35,
     arc: 0.7,
-    knockback: 260,
+    knockback: 380,
     launch: 0,
-    underChance: 0.35,
+    underChance: 0.6,
     dash: 1.7,
     weight: 10,
     basePrice: 0,
     baseScrap: 0,
-    base: { damage: 6, cooldown: 2.4, range: 10, energyCost: 18, pushForce: 0.45 },
+    base: { armorFront: 0.12, damage: 15, cooldown: 1.6, range: 10, energyCost: 18, pushForce: 0.6 },
     growth: { damage: 1.5, cooldown: -0.15, pushForce: 0.12 },
   },
   flipper: {
@@ -85,14 +88,14 @@ export const WEAPONS: Record<WeaponType, WeaponSpec> = {
     knockback: 520,
     launch: 0,
     spinUp: 1.5,
-    rpmLossPerHit: 0.55,
+    rpmLossPerHit: 0.6,
     recoil: 0.55,
     turnMul: 0.85,
     weight: 28,
     basePrice: 1100,
     baseScrap: 0,
     unlockAfter: 'c04',
-    base: { damage: 30, cooldown: 0.45, range: 20, energyCost: 9 },
+    base: { damage: 27, cooldown: 0.45, range: 20, energyCost: 9 },
     growth: { damage: 4.5, range: 2, energyCost: -0.4 },
   },
   drum: {
@@ -102,17 +105,17 @@ export const WEAPONS: Record<WeaponType, WeaponSpec> = {
     strike: 0,
     arc: 0.55,
     knockback: 380,
-    launch: 420,
-    spinUp: 1.0,
-    rpmLossPerHit: 0.45,
+    launch: 380,
+    spinUp: 1.15,
+    rpmLossPerHit: 0.7,
     recoil: 0.3,
     turnMul: 0.7,
     weight: 24,
     basePrice: 1200,
     baseScrap: 0,
     unlockAfter: 'c06',
-    base: { damage: 26, cooldown: 0.4, range: 14, energyCost: 8 },
-    growth: { damage: 4, range: 1.5, energyCost: -0.3 },
+    base: { damage: 17, cooldown: 0.55, range: 14, energyCost: 8 },
+    growth: { damage: 3, range: 1.5, energyCost: -0.3 },
   },
   hammer: {
     type: 'hammer',
@@ -127,7 +130,7 @@ export const WEAPONS: Record<WeaponType, WeaponSpec> = {
     basePrice: 800,
     baseScrap: 0,
     unlockAfter: 'c03',
-    base: { damage: 34, cooldown: 1.45, range: 50, energyCost: 16 },
+    base: { damage: 18, cooldown: 1.7, range: 42, energyCost: 16 },
     growth: { damage: 5.5, cooldown: -0.09, range: 3 },
   },
   crusher: {
@@ -143,7 +146,7 @@ export const WEAPONS: Record<WeaponType, WeaponSpec> = {
     basePrice: 1300,
     baseScrap: 1,
     unlockAfter: 'c08',
-    base: { damage: 15, cooldown: 2.2, range: 24, energyCost: 12 },
+    base: { damage: 11, cooldown: 2.2, range: 24, energyCost: 12 },
     growth: { damage: 2.5, cooldown: -0.12, energyCost: -0.6 },
   },
   saw: {
@@ -157,7 +160,7 @@ export const WEAPONS: Record<WeaponType, WeaponSpec> = {
     weight: 15,
     basePrice: 450,
     baseScrap: 0,
-    base: { damage: 26, cooldown: 0, range: 18, energyCost: 7 },
+    base: { damage: 20, cooldown: 0, range: 18, energyCost: 7 },
     growth: { damage: 4, range: 1.5, energyCost: -0.3 },
   },
   lance: {
@@ -183,12 +186,12 @@ export const WEAPONS: Record<WeaponType, WeaponSpec> = {
     arc: 0.35,
     knockback: 0,
     launch: 0,
-    burn: 2.2,
+    burn: 2.5,
     weight: 16,
     basePrice: 1000,
     baseScrap: 0,
     unlockAfter: 'c07',
-    base: { damage: 11, cooldown: 0, range: 95, energyCost: 15 },
+    base: { damage: 12, cooldown: 0, range: 95, energyCost: 15 },
     growth: { damage: 2, range: 6, energyCost: -0.6 },
   },
   magnet: {
@@ -199,13 +202,15 @@ export const WEAPONS: Record<WeaponType, WeaponSpec> = {
     arc: 0.6,
     knockback: 0,
     launch: 0,
-    pull: 170,
+    pull: 120,
+    drain: 8,
+    rpmDrain: 0.35,
     slow: 0.45,
     weight: 22,
     basePrice: 1500,
     baseScrap: 2,
     unlockAfter: 'c12',
-    base: { damage: 5, cooldown: 0, range: 135, energyCost: 13 },
+    base: { damage: 12, cooldown: 0, range: 135, energyCost: 13 },
     growth: { damage: 1.2, range: 8, energyCost: -0.5 },
   },
 };

@@ -8,7 +8,9 @@ import { hitSide } from './damage';
 
 const P = BALANCE.physics;
 const WEDGE_LIFT_SEC = 0.7;
-const DASH_RAM_MUL = 1.8;
+const DASH_RAM_MUL = 2.4;
+/** Wedges are built for ramming: frontal impacts hurt more even without a dash. */
+const WEDGE_RAM_MUL = 1.5;
 
 export type BodyOwner =
   | { kind: 'robot'; robot: RobotEntity }
@@ -104,7 +106,10 @@ function ram(
   // Only the robot whose front made the contact deals ram damage.
   if (sideOf(attacker, c.x, c.y) !== 'front' && !dashing) return;
   const amount =
-    (speed - P.ramThreshold) * P.ramDamagePerSpeed * ((2 * mA) / (mA + mB)) * (dashing ? DASH_RAM_MUL : 1);
+    (speed - P.ramThreshold) *
+    P.ramDamagePerSpeed *
+    ((2 * mA) / (mA + mB)) *
+    (dashing ? DASH_RAM_MUL : attacker.stats.weaponType === 'wedge' ? WEDGE_RAM_MUL : 1);
   ctx.damage({
     target,
     amount,

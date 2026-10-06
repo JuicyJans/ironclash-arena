@@ -182,7 +182,7 @@ export function PartsTab({
               {t('garage.unequip')}
             </Button>
           )}
-          {owned > 0 && (
+          {owned > 0 && !profile.loadouts.some((l) => isEquipped(l, part)) && (
             <Button variant="ghost" size="small" onClick={() => setConfirmSell(true)}>
               {t('shop.sell')} ⛁ {sellValue(profile, part.id)}
             </Button>

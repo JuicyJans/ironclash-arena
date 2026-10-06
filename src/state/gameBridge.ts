@@ -7,6 +7,7 @@ export interface GameBridge {
   setPaused(paused: boolean): void;
   /** Network: guest-side forfeit / host walkover. */
   forfeit(): void;
+  skipTutorial(): void;
 }
 
 const noop = () => {};
@@ -16,6 +17,7 @@ export const gameBridge: GameBridge = {
   stopMatch: noop,
   setPaused: noop,
   forfeit: noop,
+  skipTutorial: noop,
 };
 
 export function registerGameBridge(impl: GameBridge): void {

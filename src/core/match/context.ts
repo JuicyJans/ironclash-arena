@@ -14,6 +14,8 @@ export interface SimContext extends DamageContext {
   time: number;
   dt: number;
   pitOpen: boolean[];
+  /** Tutorial warm-up: clock, AI and immobility counting are frozen. */
+  readonly warmup: boolean;
   damage(hit: DamageHit): number;
   ko(r: RobotEntity, reason: KoReason, byId: number): void;
   launch(r: RobotEntity, power: number, byId: number): void;

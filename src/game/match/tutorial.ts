@@ -17,12 +17,7 @@ export class TutorialDirector {
     sim.warmup = true;
     const r = sim.robots[playerId]!;
     this.last = { x: r.body.position.x, y: r.body.position.y, a: r.body.angle };
-    this.offs.push(
-      sim.events.on('weaponFire', (e) => e.robotId === playerId && this.bump('weapon', 1)),
-      sim.events.on('weaponWindup', (e) => e.robotId === playerId && this.bump('weapon', 1)),
-      sim.events.on('boost', (e) => e.robotId === playerId && this.bump('boost', 1)),
-      sim.events.on('damage', (e) => e.sourceId === playerId && this.bump('ram', e.amount)),
-    );
+    this.offs.push(sim.events.on('damage', (e) => e.sourceId === playerId && this.bump('ram', e.amount)));
   }
 
   get step(): { step: string; progress: number } | null {
@@ -44,6 +39,8 @@ export class TutorialDirector {
     if (step.id === 'drive') this.progress += Math.hypot(p.x - this.last.x, p.y - this.last.y);
     if (step.id === 'turn') this.progress += Math.abs(angleDiff(this.last.a, r.body.angle));
     if (step.id === 'rules') this.progress += dt;
+    if (step.id === 'weapon' && r.input.weapon && !r.prevInput.weapon) this.progress += 1;
+    if (step.id === 'boost' && r.status.boosting) this.progress += dt;
     this.last = { x: p.x, y: p.y, a: r.body.angle };
     if (this.progress >= step.goal) {
       this.index++;

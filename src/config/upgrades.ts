@@ -61,11 +61,11 @@ const armorBalanced = ARMOR_TIERS.map((t) => ({
 }));
 
 const armorFrontHeavy = ARMOR_TIERS.map((t) => ({
-  hp: t.hp,
+  hp: Math.round(t.hp * 0.8),
   weight: t.weight,
-  armorFront: t.armor * 1.7,
+  armorFront: t.armor * 1.45,
   armorSide: t.armor * 0.85,
-  armorRear: t.armor * 0.35,
+  armorRear: t.armor * 0.3,
   armorTop: t.armor * 0.8,
   pushForce: 0.06,
 }));

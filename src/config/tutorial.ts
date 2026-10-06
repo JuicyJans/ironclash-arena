@@ -10,8 +10,8 @@ export interface TutorialStep {
 export const TUTORIAL: TutorialStep[] = [
   { id: 'drive', goal: 260 },
   { id: 'turn', goal: 5 },
-  { id: 'weapon', goal: 2 },
-  { id: 'boost', goal: 1 },
+  { id: 'weapon', goal: 1 },
+  { id: 'boost', goal: 0.8 },
   { id: 'ram', goal: 8 },
   { id: 'rules', goal: 6 },
 ];

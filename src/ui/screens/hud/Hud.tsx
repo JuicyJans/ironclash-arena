@@ -1,5 +1,6 @@
 import { BALANCE } from '../../../config/balance';
 import { keyLabel } from '../../../game/input/keyboard';
+import { gameBridge } from '../../../state/gameBridge';
 import type { HudRobot, HudState } from '../../../state/store';
 import { useApp, useT } from '../../hooks';
 import css from './hud.module.css';
@@ -191,6 +192,9 @@ export function Hud({ hud }: { hud: HudState }) {
           <div class={css.progress}>
             <div class={css.progressFill} style={{ width: `${(hud.tutorial?.progress ?? 0) * 100}%` }} />
           </div>
+          <button type="button" class={css.skip} onClick={() => gameBridge.skipTutorial()}>
+            {t('common.skip')} ›
+          </button>
         </div>
       )}
 

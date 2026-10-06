@@ -25,6 +25,7 @@ const base: Situation = {
   hasSmoke: false,
   enemyInverted: false,
   enemyWindingUp: false,
+  enemyRearWeak: 0,
 };
 const P = AI_PROFILES.standard!;
 const best = (s: Partial<Situation>) => chooseAction(scoreActions({ ...base, ...s }, P), 'attack', 0);
@@ -108,6 +109,14 @@ describe('navigation', () => {
     const field = computeFlowField(g, 15 * g.cell, 2 * g.cell);
     const wp = flowWaypoint(g, field, 5 * g.cell, 2 * g.cell, 1);
     expect(wp.y).toBeGreaterThan(2 * g.cell);
+  });
+
+  it('flow field stays fast with huge costs (float precision regression)', () => {
+    const g = createGrid(getArena('colosseum'));
+    for (let i = 0; i < g.cost.length; i++) g.cost[i] = i % 3 === 0 ? 999_999.7 : 1 + (i % 7) * 13.37;
+    const t0 = performance.now();
+    computeFlowField(g, 800, 500);
+    expect(performance.now() - t0).toBeLessThan(100);
   });
 
   it('danger map marks open pits as blocked and imminent hazards as costly', () => {

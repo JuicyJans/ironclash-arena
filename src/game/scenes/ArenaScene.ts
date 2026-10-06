@@ -134,6 +134,10 @@ export class ArenaScene extends Phaser.Scene {
     });
   }
 
+  skipTutorial(): void {
+    this.controller.tutorial?.skip();
+  }
+
   setPaused(p: boolean): void {
     if (!this.controller.pausable) return;
     this.paused = p;

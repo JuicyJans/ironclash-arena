@@ -24,6 +24,8 @@ export interface Situation {
   hasSmoke: boolean;
   enemyInverted: boolean;
   enemyWindingUp: boolean;
+  /** 0..1 how much weaker the enemy's rear is than its front (front-heavy armour). */
+  enemyRearWeak: number;
 }
 
 /** Danger of facing each weapon head-on (used for flanking decisions). */
@@ -61,7 +63,7 @@ export function scoreActions(s: Situation, p: AiProfile): Record<AiAction, numbe
       (s.enemyInverted ? 0.6 : 0) +
       (s.weaponReady ? 0.15 : 0) -
       exposed * (1 - p.aggression) * 0.6,
-    flank: p.flanking * exposed * 1.3 * close,
+    flank: (p.flanking * exposed * 1.3 + p.flanking * s.enemyRearWeak * 0.7) * close,
     lureHazard: p.hazardUse * s.enemyNearHazard * 1.25,
   };
 }

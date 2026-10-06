@@ -22,6 +22,7 @@ export const BRONZE: CampaignLevel[] = [
     opponents: [
       {
         ai: 'rookie',
+        hpMul: 0.7,
         build: makeBuild({
           name: 'Rusty Rex',
           chassis: 'light',
@@ -100,7 +101,7 @@ export const BRONZE: CampaignLevel[] = [
           name: 'Sir Grindalot',
           chassis: 'medium',
           armor: ['balanced', 2],
-          drive: ['tracks', 1],
+          drive: ['tracks', 2],
           weapon: ['hammer', 2],
           power: ['capacity', 2],
           cosmetics: look('#7a7f8a', '#2a2d33', '#9fd3ff', 'skull'),

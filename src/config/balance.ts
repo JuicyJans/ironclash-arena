@@ -13,7 +13,7 @@ export const BALANCE = {
     gravity: 1500,
     /** Collision impulse (relative speed, units/s) needed before ramming deals damage. */
     ramThreshold: 140,
-    ramDamagePerSpeed: 0.035,
+    ramDamagePerSpeed: 0.05,
     wallDamagePerSpeed: 0.012,
     /** Seconds after a launch during which landing may flip the robot. */
     maxAirTime: 1.6,

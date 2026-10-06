@@ -52,7 +52,7 @@ export const MASTER: CampaignLevel[] = [
         build: makeBuild({
           name: 'Molten Maw Reforged',
           chassis: 'heavy',
-          armor: ['frontHeavy', 4],
+          armor: ['frontHeavy', 3],
           drive: ['tracks', 4],
           weapon: ['hSpinner', 4],
           power: ['capacity', 4],
@@ -77,14 +77,14 @@ export const MASTER: CampaignLevel[] = [
     opponents: [
       {
         ai: 'champion',
-        hpMul: 1.1,
+        hpMul: 1.0,
         build: makeBuild({
           name: 'Iron Sovereign',
           chassis: 'heavy',
-          armor: ['balanced', 5],
-          drive: ['tracks', 5],
-          weapon: ['drum', 5],
-          power: ['regen', 5],
+          armor: ['balanced', 4],
+          drive: ['tracks', 4],
+          weapon: ['drum', 4],
+          power: ['regen', 4],
           support: [
             ['selfRight', 4],
             ['shieldPulse', 4],

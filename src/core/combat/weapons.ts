@@ -264,6 +264,9 @@ function updateHold(ctx: SimContext, r: RobotEntity, spec: WeaponSpec): void {
       setVel(t.body, v.x + (dx / d) * pull, v.y + (dy / d) * pull);
       t.status.slow = 0.2;
       t.status.slowMul = spec.slow ?? 1;
+      // Electromagnetic disruption: drains the target's battery and spins down its rotor.
+      t.energy = Math.max(0, t.energy - (spec.drain ?? 0) * ctx.dt);
+      t.weapon.rpm = Math.max(0, t.weapon.rpm - (spec.rpmDrain ?? 0) * ctx.dt);
     }
   }
 }

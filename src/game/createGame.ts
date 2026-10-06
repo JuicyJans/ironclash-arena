@@ -45,6 +45,9 @@ export function createGame(parent: HTMLElement): Phaser.Game {
     forfeit() {
       /* handled by the network controllers */
     },
+    skipTutorial() {
+      if (game.scene.isActive('arena')) arena().skipTutorial();
+    },
   });
 
   setInterval(() => {

@@ -218,6 +218,10 @@ function checkPits(ctx: SimContext, r: RobotEntity): void {
 
 function updateImmobile(ctx: SimContext, r: RobotEntity): void {
   if (!r.alive) return;
+  if (ctx.warmup) {
+    r.immobileTimer = 0;
+    return;
+  }
   const pos = r.body.position;
   const m = r.mobility;
   const moved =

@@ -28,7 +28,7 @@ export class AiBrain {
   private history: Seen[][] = [];
   private lastClear = new Map<number, Seen>();
   private grid: DangerGrid | null = null;
-  private flow: Float32Array | null = null;
+  private flow: Float64Array | null = null;
   private flowGoal = { x: -1e9, y: -1e9 };
   private flowTick = -1e9;
   private action: AiAction = 'attack';
@@ -208,6 +208,7 @@ export class AiBrain {
       hasSmoke: hasModule('smokeScreen'),
       enemyInverted: t.inverted,
       enemyWindingUp: t.windingUp,
+      enemyRearWeak: clamp((enemy.stats.armorFront - enemy.stats.armorRear) / 0.3, 0, 1),
     };
   }
 
@@ -269,6 +270,11 @@ export class AiBrain {
   }
 }
 
+const CONTROL_WEAPONS = new Set(['wedge', 'magnet', 'crusher']);
+
 export function createAi(r: RobotEntity, seed: number): AiBrain {
-  return new AiBrain(r.id, scaledProfile(getProfile(r.aiProfile), r.difficulty ?? 'normal'), seed);
+  const profile = scaledProfile(getProfile(r.aiProfile), r.difficulty ?? 'normal');
+  // Control weapons win by pushing opponents into hazards, so their pilots lean into it.
+  if (CONTROL_WEAPONS.has(r.stats.weaponType)) profile.hazardUse = Math.min(1, profile.hazardUse + 0.35);
+  return new AiBrain(r.id, profile, seed);
 }

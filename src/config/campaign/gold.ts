@@ -48,10 +48,10 @@ export const GOLD: CampaignLevel[] = [
         ai: 'speedster',
         build: makeBuild({
           name: 'Overclock',
-          chassis: 'medium',
+          chassis: 'heavy',
           armor: ['balanced', 3],
-          drive: ['wheels', 4],
-          weapon: ['drum', 3],
+          drive: ['wheels', 5],
+          weapon: ['drum', 4],
           power: ['regen', 3],
           cosmetics: look('#ecc94b', '#1a1a1a', '#fff27a', 'bolt'),
         }),
@@ -97,13 +97,13 @@ export const GOLD: CampaignLevel[] = [
     opponents: [
       {
         ai: 'adaptive',
-        hpMul: 1.08,
+        hpMul: 1.0,
         build: makeBuild({
           name: 'Voltress',
           chassis: 'heavy',
-          armor: ['balanced', 4],
+          armor: ['balanced', 3],
           drive: ['tracks', 4],
-          weapon: ['magnet', 4],
+          weapon: ['magnet', 3],
           power: ['regen', 4],
           support: [
             ['shieldPulse', 3],

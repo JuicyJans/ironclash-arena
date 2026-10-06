@@ -51,8 +51,9 @@ class Heap {
 }
 
 /** Dijkstra from the goal cell over the danger grid. Returns travel cost to the goal per cell. */
-export function computeFlowField(g: DangerGrid, goalX: number, goalY: number): Float32Array {
-  const dist = new Float32Array(g.cols * g.rows).fill(Infinity);
+export function computeFlowField(g: DangerGrid, goalX: number, goalY: number): Float64Array {
+  // Float64 on purpose: float32 rounding makes Dijkstra re-relax the same cells endlessly.
+  const dist = new Float64Array(g.cols * g.rows).fill(Infinity);
   const start = cellIndex(g, goalX, goalY);
   dist[start] = 0;
   const heap = new Heap();
@@ -82,7 +83,7 @@ export function computeFlowField(g: DangerGrid, goalX: number, goalY: number): F
 /** Follows the flow field a few cells ahead from (x, y). Returns a waypoint in world units. */
 export function flowWaypoint(
   g: DangerGrid,
-  dist: Float32Array,
+  dist: Float64Array,
   x: number,
   y: number,
   lookahead = 3,

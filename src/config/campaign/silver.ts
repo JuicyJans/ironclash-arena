@@ -70,29 +70,29 @@ export const SILVER: CampaignLevel[] = [
     opponents: [
       {
         ai: 'swarm',
+        hpMul: 0.5,
         build: makeBuild({
           name: 'Twin Fang A',
           chassis: 'light',
           armor: ['balanced', 2],
           drive: ['wheels', 3],
-          weapon: ['saw', 2],
+          weapon: ['saw', 1],
           power: ['regen', 1],
           cosmetics: look('#2f855a', '#132a1e', '#7cf5b0', 'stripes'),
         }),
-        hpMul: 0.6,
       },
       {
         ai: 'swarm',
+        hpMul: 0.5,
         build: makeBuild({
           name: 'Twin Fang B',
           chassis: 'light',
           armor: ['balanced', 2],
           drive: ['wheels', 3],
-          weapon: ['lance', 2],
+          weapon: ['lance', 1],
           power: ['regen', 1],
           cosmetics: look('#2f855a', '#132a1e', '#7cf5b0', 'stripes'),
         }),
-        hpMul: 0.6,
       },
     ],
   },

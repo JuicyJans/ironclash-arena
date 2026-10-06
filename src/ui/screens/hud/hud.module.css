@@ -334,3 +334,23 @@
 .tbtn[data-on='true'] {
   background: rgba(255, 90, 31, 0.6);
 }
+
+.skip {
+  position: absolute;
+  top: 0.6em;
+  right: 0.8em;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--c-text-dim);
+  font-family: var(--f-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.1em 0.6em;
+  cursor: pointer;
+}
+.skip:hover,
+.skip:focus-visible {
+  color: var(--c-text);
+  border-color: var(--c-cyan);
+}
