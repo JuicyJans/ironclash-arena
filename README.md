@@ -42,6 +42,12 @@
 
 Når roboten er veltet: hold **våpen** eller **spesial** for å rette den opp (flippere og hammere gjør det raskt, selvrettingsmodulen enda raskere). Alle taster kan endres under _Innstillinger → Kontroller_. Gamepads tildeles automatisk (én gamepad i 2-spiller går til spiller 2).
 
+## Spill nå
+
+- **I nettleseren (Mac, Windows, Linux, nettbrett):** https://juicyjans.github.io/ironclash-arena/ – kan også installeres som app via nettleserens «Installer»-knapp.
+- **Lokalt på Mac:** dobbeltklikk `Spill IRONCLASH.command`.
+- **Lokalt på Windows:** installer [Node.js LTS](https://nodejs.org), last ned repoet (*Code → Download ZIP*), pakk ut og dobbeltklikk `Spill IRONCLASH.bat`.
+
 ## Kom i gang
 
 Krever Node.js 20 eller nyere.
